@@ -19,6 +19,10 @@
                         redSkill: '#F3AFA8',
                         orangeSkill: '#FF6250',
                         greenSkill: '#009379',
+                    },
+                    spacing: {
+                        '68': '17rem',
+                        '86': '21.5rem',
                     }
                 }
             }
@@ -27,6 +31,13 @@
     <style>
         body {
             font-family: 'Epilogue', sans-serif;
+        }
+        .skill-arrow {
+            width: 20px;
+            height: 20px;
+            border-top: 1.5px solid #2D2D2D;
+            border-right: 1.5px solid #2D2D2D;
+            transform: rotate(45deg);
         }
     </style>
 </head>
@@ -73,7 +84,7 @@
             <div class="flex flex-col justify-center items-center flex-1 gap-10 p-16">
                 <div class="w-16 h-16 relative">
                     <div class="w-16 h-16 bg-redSkill"></div>
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-5 w-5 border-t border-r border-darkGray rotate-45"></div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 skill-arrow"></div>
                 </div>
                 <div class="flex flex-col w-full gap-3">
                     <h3 class="text-2xl font-semibold text-center">Product Design</h3>
@@ -86,7 +97,7 @@
             <div class="flex flex-col justify-center items-center flex-1 gap-10 p-16">
                 <div class="w-16 h-16 relative">
                     <div class="w-16 h-16 bg-orangeSkill"></div>
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-5 w-5 border-t border-r border-darkGray rotate-45"></div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 skill-arrow"></div>
                 </div>
                 <div class="flex flex-col w-full gap-3">
                     <h3 class="text-2xl font-semibold text-center">Visual Design</h3>
@@ -99,7 +110,7 @@
             <div class="flex flex-col justify-center items-center flex-1 gap-10 p-16">
                 <div class="w-16 h-16 relative">
                     <div class="w-16 h-16 bg-greenSkill"></div>
-                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-5 w-5 border-t border-r border-darkGray rotate-45"></div>
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 skill-arrow"></div>
                 </div>
                 <div class="flex flex-col w-full gap-3">
                     <h3 class="text-2xl font-semibold text-center">Art Direction</h3>
