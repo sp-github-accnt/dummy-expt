@@ -1,21 +1,44 @@
-describe('Figma Design Image Comparison', () => {
-  // A simpler approach that doesn't rely on plugins that might have compatibility issues
-  it('should match the Figma design image', () => {
-    // Visit the page
+describe('Image-based Comparison with Figma Design', () => {
+  beforeEach(() => {
+    // Visit the website
     cy.visit('/');
     
-    // Wait for everything to load
-    cy.wait(2000);
-    
+    // Wait for all images to load
+    cy.get('img').should('be.visible');
+    cy.wait(2000); // Ensure everything is fully rendered
+  });
+
+  it('should take a screenshot for manual comparison with Figma', () => {
     // Take a screenshot of the full page
-    cy.screenshot('website-full-page', { 
+    cy.screenshot('full-page-comparison', { 
       capture: 'fullPage',
       overwrite: true 
     });
     
-    // Log a message to the user that manual comparison is needed
-    cy.log('Screenshot captured. Please manually compare with the Figma design reference.');
-    cy.log('The screenshot is saved in cypress/screenshots/image-comparison.cy.js/website-full-page.png');
-    cy.log('The Figma reference image is in cypress/fixtures/figma-design-reference.png');
+    // We would then use this screenshot to manually compare with the Figma design
+    // or use a visual testing library to automate the comparison
+    cy.log('Screenshot taken for comparison with Figma design');
+  });
+
+  it('should take sectional screenshots for detailed comparison', () => {
+    // Navigation
+    cy.get('nav').screenshot('navigation-section', { overwrite: true });
+    
+    // Header section
+    cy.get('#about').screenshot('header-section', { overwrite: true });
+    
+    // Skills section
+    cy.get('section:contains("Product Design")').screenshot('skills-section', { overwrite: true });
+    
+    // Gallery section
+    cy.get('#work').screenshot('gallery-section', { overwrite: true });
+    
+    // Testimonial section
+    cy.get('section:contains("Testimonial")').screenshot('testimonial-section', { overwrite: true });
+    
+    // Contact section
+    cy.get('#contact').screenshot('contact-section', { overwrite: true });
+    
+    cy.log('Sectional screenshots taken for detailed comparison with Figma design');
   });
 }); 
