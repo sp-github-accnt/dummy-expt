@@ -1,0 +1,14 @@
+{
+  "name": "figma-to-website",
+  "version": "1.0.0",
+  "description": "Figma design converted to website",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "cypress open",
+    "test:headless": "cypress run"
+  },
+  "devDependencies": {
+    "cypress": "^12.14.0"
+  }
+} 

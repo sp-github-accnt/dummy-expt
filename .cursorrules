@@ -1,0 +1,15 @@
+Convert Given Figma Link to Website. 
+
+Website link is https://sp-github-accnt.github.io/dummy-expt/
+
+Steps are:
+1. Convert Figma link to HTML/CSS using Figma MCP. Use Tailwind CSS and its
+   inline classes for all purposes.
+   
+2. Download Figma design as image. Run Cypress MCP to create and run cypress
+tests that will verify if the generated HTML/CSS matches with the Figma Design Image.
+Always run cypress test in non headless browser so that user. Make sure to run
+single Cypress test at a time.
+
+3. If the Generated HTML/CSS matches with Figma Design. Commit changes and Push
+   them to main branch.
